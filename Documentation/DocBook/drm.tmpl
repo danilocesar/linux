@@ -303,6 +303,9 @@ char *date;</synopsis>
       </para>
 !Edrivers/gpu/drm/drm_pci.c
 !Edrivers/gpu/drm/drm_platform.c
+    </sect2>
+    <sect2>
+      <title>Calling Registration Directly</title>
       <para>
         New drivers that no longer rely on the services provided by the
         <structname>drm_bus</structname> structure can call the low-level
@@ -2352,7 +2355,7 @@ void intel_crt_init(struct drm_device *dev)
       </itemizedlist>
     </sect2>
     <sect2>
-      <title>Atomic Modeset Helper Functions Reference</title>
+      <title>Atomic Modeset Helper Functions Introduction</title>
       <sect3>
 	<title>Overview</title>
 !Pdrivers/gpu/drm/drm_atomic_helper.c overview
@@ -2365,14 +2368,20 @@ void intel_crt_init(struct drm_device *dev)
 	<title>Atomic State Reset and Initialization</title>
 !Pdrivers/gpu/drm/drm_atomic_helper.c atomic state reset and initialization
       </sect3>
+    </sect2>
+    <sect2>
+      <title>Atomic Modeset Helper Functions Reference</title>
 !Iinclude/drm/drm_atomic_helper.h
 !Edrivers/gpu/drm/drm_atomic_helper.c
+    </sect2>
+    <sect2>
+      <title>Modeset Helper Functions Introduction</title>
+!Pdrivers/gpu/drm/drm_crtc_helper.c overview
     </sect2>
     <sect2>
       <title>Modeset Helper Functions Reference</title>
 !Iinclude/drm/drm_crtc_helper.h
 !Edrivers/gpu/drm/drm_crtc_helper.c
-!Pdrivers/gpu/drm/drm_crtc_helper.c overview
     </sect2>
     <sect2>
       <title>Output Probing Helper Functions Reference</title>
@@ -2432,8 +2441,8 @@ void intel_crt_init(struct drm_device *dev)
     </sect2>
     <sect2>
       <title id="drm-kms-planehelpers">Plane Helper Reference</title>
-!Edrivers/gpu/drm/drm_plane_helper.c
 !Pdrivers/gpu/drm/drm_plane_helper.c overview
+!Edrivers/gpu/drm/drm_plane_helper.c
     </sect2>
     <sect2>
 	  <title>Tile group</title>
@@ -2449,6 +2458,9 @@ void intel_crt_init(struct drm_device *dev)
 	 <title>Default bridge callback sequence</title>
 !Pdrivers/gpu/drm/drm_bridge.c bridge callbacks
       </sect3>
+    </sect2>
+    <sect2>
+      <title>Bridges Function Reference</title>
 !Edrivers/gpu/drm/drm_bridge.c
     </sect2>
   </sect1>
