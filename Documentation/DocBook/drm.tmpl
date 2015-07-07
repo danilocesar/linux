@@ -579,9 +579,9 @@ char *date;</synopsis>
       <para>
         On a fundamental level, GEM involves several operations:
         <itemizedlist>
-          <listitem>Memory allocation and freeing</listitem>
-          <listitem>Command execution</listitem>
-          <listitem>Aperture management at command execution time</listitem>
+          <listitem><para>Memory allocation and freeing</para></listitem>
+          <listitem><para>Command execution</para></listitem>
+          <listitem><para>Aperture management at command execution time</para></listitem>
         </itemizedlist>
         Buffer object allocation is relatively straightforward and largely
         provided by Linux's shmem layer, which provides memory to back each
@@ -1386,20 +1386,20 @@ int max_width, max_height;</synopsis>
       <para>
       The DRM core recognizes three types of planes:
       <itemizedlist>
-        <listitem>
+        <listitem><para>
         DRM_PLANE_TYPE_PRIMARY represents a "main" plane for a CRTC.  Primary
         planes are the planes operated upon by CRTC modesetting and flipping
         operations described in <xref linkend="drm-kms-crtcops"/>.
-        </listitem>
-        <listitem>
+        </para></listitem>
+        <listitem><para>
         DRM_PLANE_TYPE_CURSOR represents a "cursor" plane for a CRTC.  Cursor
         planes are the planes operated upon by the DRM_IOCTL_MODE_CURSOR and
         DRM_IOCTL_MODE_CURSOR2 ioctls.
-        </listitem>
-        <listitem>
+        </para></listitem>
+        <listitem><para>
         DRM_PLANE_TYPE_OVERLAY represents all non-primary, non-cursor planes.
         Some drivers refer to these types of planes as "sprites" internally.
-        </listitem>
+        </para></listitem>
       </itemizedlist>
       For compatibility with legacy userspace, only overlay planes are made
       available to userspace by default.  Userspace clients may set the
@@ -1503,22 +1503,22 @@ int max_width, max_height;</synopsis>
           <function>drm_encoder_init</function>. The function takes a pointer to
           the encoder functions and an encoder type. Supported types are
           <itemizedlist>
-            <listitem>
+            <listitem><para>
               DRM_MODE_ENCODER_DAC for VGA and analog on DVI-I/DVI-A
-              </listitem>
-            <listitem>
+              </para></listitem>
+            <listitem><para>
               DRM_MODE_ENCODER_TMDS for DVI, HDMI and (embedded) DisplayPort
-            </listitem>
-            <listitem>
+            </para></listitem>
+            <listitem><para>
               DRM_MODE_ENCODER_LVDS for display panels
-            </listitem>
-            <listitem>
+            </para></listitem>
+            <listitem><para>
               DRM_MODE_ENCODER_TVDAC for TV output (Composite, S-Video, Component,
               SCART)
-            </listitem>
-            <listitem>
+            </para></listitem>
+            <listitem><para>
               DRM_MODE_ENCODER_VIRTUAL for virtual machine displays
-            </listitem>
+            </para></listitem>
           </itemizedlist>
         </para>
         <para>
@@ -1635,21 +1635,21 @@ int max_width, max_height;</synopsis>
         <para>
           Supported connector types are
           <itemizedlist>
-            <listitem>DRM_MODE_CONNECTOR_VGA</listitem>
-            <listitem>DRM_MODE_CONNECTOR_DVII</listitem>
-            <listitem>DRM_MODE_CONNECTOR_DVID</listitem>
-            <listitem>DRM_MODE_CONNECTOR_DVIA</listitem>
-            <listitem>DRM_MODE_CONNECTOR_Composite</listitem>
-            <listitem>DRM_MODE_CONNECTOR_SVIDEO</listitem>
-            <listitem>DRM_MODE_CONNECTOR_LVDS</listitem>
-            <listitem>DRM_MODE_CONNECTOR_Component</listitem>
-            <listitem>DRM_MODE_CONNECTOR_9PinDIN</listitem>
-            <listitem>DRM_MODE_CONNECTOR_DisplayPort</listitem>
-            <listitem>DRM_MODE_CONNECTOR_HDMIA</listitem>
-            <listitem>DRM_MODE_CONNECTOR_HDMIB</listitem>
-            <listitem>DRM_MODE_CONNECTOR_TV</listitem>
-            <listitem>DRM_MODE_CONNECTOR_eDP</listitem>
-            <listitem>DRM_MODE_CONNECTOR_VIRTUAL</listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_VGA</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_DVII</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_DVID</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_DVIA</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_Composite</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_SVIDEO</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_LVDS</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_Component</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_9PinDIN</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_DisplayPort</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_HDMIA</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_HDMIB</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_TV</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_eDP</para></listitem>
+            <listitem><para>DRM_MODE_CONNECTOR_VIRTUAL</para></listitem>
           </itemizedlist>
         </para>
         <para>
@@ -3612,7 +3612,10 @@ void (*lastclose) (struct drm_device *);
 int (*open) (struct drm_device *, struct drm_file *);
 void (*preclose) (struct drm_device *, struct drm_file *);
 void (*postclose) (struct drm_device *, struct drm_file *);</synopsis>
-      <abstract>Open and close handlers. None of those methods are mandatory.
+      <abstract>
+      <para>
+        Open and close handlers. None of those methods are mandatory.
+      </para>
       </abstract>
       <para>
         The <methodname>firstopen</methodname> method is called by the DRM core
@@ -3667,7 +3670,11 @@ void (*postclose) (struct drm_device *, struct drm_file *);</synopsis>
     <sect2>
       <title>File Operations</title>
       <synopsis>const struct file_operations *fops</synopsis>
-      <abstract>File operations for the DRM device node.</abstract>
+      <abstract>
+      <para>
+         File operations for the DRM device node.
+      </para>
+      </abstract>
       <para>
         Drivers must define the file operations structure that forms the DRM
 	userspace API entry point, even though most of those operations are
@@ -3717,14 +3724,17 @@ void (*postclose) (struct drm_device *, struct drm_file *);</synopsis>
       <title>IOCTLs</title>
       <synopsis>struct drm_ioctl_desc *ioctls;
 int num_ioctls;</synopsis>
-      <abstract>Driver-specific ioctls descriptors table.</abstract>
+      <abstract>
+      <para>
+         Driver-specific ioctls descriptors table.
+      </para>
+      </abstract>
       <para>
         Driver-specific ioctls numbers start at DRM_COMMAND_BASE. The ioctls
 	descriptors table is indexed by the ioctl number offset from the base
 	value. Drivers can use the DRM_IOCTL_DEF_DRV() macro to initialize the
 	table entries.
       </para>
-      <para>
         <programlisting>DRM_IOCTL_DEF_DRV(ioctl, func, flags)</programlisting>
 	<para>
 	  <parameter>ioctl</parameter> is the ioctl name. Drivers must define
@@ -3763,7 +3773,6 @@ int num_ioctls;</synopsis>
 	    </para></listitem>
 	  </itemizedlist>
 	</para>
-      </para>
     </sect2>
   </sect1>
   <sect1>
