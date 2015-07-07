@@ -1198,14 +1198,14 @@ int max_width, max_height;</synopsis>
       <para>
         Beside some lookup structures with their own locking (which is hidden
 	behind the interface functions) most of the modeset state is protected
-	by the <code>dev-&lt;mode_config.lock</code> mutex and additionally
+	by the <literal>dev-&lt;mode_config.lock</literal> mutex and additionally
 	per-crtc locks to allow cursor updates, pageflips and similar operations
 	to occur concurrently with background tasks like output detection.
 	Operations which cross domains like a full modeset always grab all
 	locks. Drivers there need to protect resources shared between crtcs with
 	additional locking. They also need to be careful to always grab the
 	relevant crtc locks if a modset functions touches crtc state, e.g. for
-	load detection (which does only grab the <code>mode_config.lock</code>
+	load detection (which does only grab the <literal>mode_config.lock</literal>
 	to allow concurrent screen updates on live crtcs).
       </para>
     </sect2>
@@ -1296,8 +1296,8 @@ int max_width, max_height;</synopsis>
           </para>
           <para>
             If a page flip can be successfully scheduled the driver must set the
-            <code>drm_crtc-&gt;fb</code> field to the new framebuffer pointed to
-            by <code>fb</code>. This is important so that the reference counting
+            <literal>drm_crtc-&gt;fb</literal> field to the new framebuffer pointed to
+            by <literal>fb</literal>. This is important so that the reference counting
             on framebuffers stays balanced.
           </para>
           <para>
