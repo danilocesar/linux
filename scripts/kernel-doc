@@ -156,7 +156,7 @@ use IPC::Open3;
 #     int c;
 # };
 #
-# This should be use for arguments only.
+# This should be use only for struct/enum members.
 #
 # You can also add additional sections. When documenting kernel functions you
 # should document the "Context:" of the function, e.g. whether the functions
@@ -2606,45 +2606,42 @@ sub process_file($) {
 		++$warnings;
 	    }
 	} elsif ($state == 5) { # scanning for split parameters
-
 	    # First line (state 1) needs to be a @parameter
 	    if ($split_doc_state == 1 && /$doc_split_sect/o) {
-	        $section = $1;
-	        $contents = $2;
-	        if ($contents ne "") {
-	    	    while ((substr($contents, 0, 1) eq " ") ||
-	                    substr($contents, 0, 1) eq "\t") {
-	    	        $contents = substr($contents, 1);
-	            }
-	            $contents .= "\n";
-	        }
-	        $split_doc_state = 2;
-
-	    # End commend */
+		$section = $1;
+		$contents = $2;
+		if ($contents ne "") {
+		    while ((substr($contents, 0, 1) eq " ") ||
+		           substr($contents, 0, 1) eq "\t") {
+			$contents = substr($contents, 1);
+		    }
+		$contents .= "\n";
+		}
+		$split_doc_state = 2;
+	    # Documentation block end */
 	    } elsif (/$doc_split_end/) {
-	        if (($contents ne "") && ($contents ne "\n")) {
-	            dump_section($file, $section, xml_escape($contents));
-	            $section = $section_default;
-	            $contents = "";
-	        }
-	        $state = 3;
-	        $split_doc_state = 0;
-
+		if (($contents ne "") && ($contents ne "\n")) {
+		    dump_section($file, $section, xml_escape($contents));
+		    $section = $section_default;
+		    $contents = "";
+		}
+		$state = 3;
+		$split_doc_state = 0;
 	    # Regular text
 	    } elsif (/$doc_content/) {
-	    	if ($split_doc_state == 2) {
-	    	    $contents .= $1 . "\n";
-	    	} elsif ($split_doc_state == 1) {
-	    	    $split_doc_state = 4;
-	    	    print STDERR "Warning(${file}:$.): ";
-	    	    print STDERR "Incorrect use of kernel-doc format: $_";
-	    	    ++$warnings;
-	    	}
+		if ($split_doc_state == 2) {
+		    $contents .= $1 . "\n";
+		} elsif ($split_doc_state == 1) {
+		    $split_doc_state = 4;
+		    print STDERR "Warning(${file}:$.): ";
+		    print STDERR "Incorrect use of kernel-doc format: $_";
+		    ++$warnings;
+		}
 	    }
 	} elsif ($state == 3) {	# scanning for function '{' (end of prototype)
 	    if (/$doc_split_start/) {
-	    	    $state = 5;
-	    	    $split_doc_state = 1;
+		$state = 5;
+		$split_doc_state = 1;
 	    } elsif ($decl_type eq 'function') {
 		process_state3_function($_, $file);
 	    } else {
