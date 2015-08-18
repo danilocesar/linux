@@ -605,7 +605,7 @@ sub output_highlight {
 	    $line =~ s/^\s*//;
 	}
 	if ($line eq ""){
-	    if (! $output_preformatted) {
+	    if (! $output_preformatted && ! $use_markdown) {
 		print $lineprefix, local_unescape($blankline);
 	    }
 	} else {
@@ -2426,6 +2426,7 @@ sub process_state3_type($$) {
 # just before actual output; (this is done by local_unescape())
 sub xml_escape($) {
 	my $text = shift;
+
 	if (($output_mode eq "text") || ($output_mode eq "man")) {
 		return $text;
 	}
@@ -2478,6 +2479,8 @@ sub process_file($) {
 	while (s/\\\s*$//) {
 	    $_ .= <IN>;
 	}
+
+	#print STDERR "$state $_";
 	if ($state == 0) {
 	    if (/$doc_start/o) {
 		$state = 1;		# next line is always the function name
@@ -2684,7 +2687,11 @@ sub process_file($) {
 		{
 			if ( $1 eq "" )
 			{
-				$contents .= $blankline;
+				if ($use_markdown) {
+					$contents .= "\n";
+				} else {
+					$contents .= $blankline;
+				}
 			}
 			else
 			{
