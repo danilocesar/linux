@@ -2604,7 +2604,7 @@ void intel_crt_init(struct drm_device *dev)
           <row>
             <entry morerows="36">DRM</entry>
             <entry>Generic</entry>
-            <entry>“rotation”</entry>
+            <entry>"rotation"</entry>
             <entry>BITMASK</entry>
             <entry>{ 0, &quot;rotate-0&quot; },
               { 1, &quot;rotate-90&quot; },
@@ -2620,35 +2620,35 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="4" >Connector</entry>
-            <entry>“EDID”</entry>
+            <entry>"EDID"</entry>
             <entry>BLOB | IMMUTABLE</entry>
             <entry>0</entry>
             <entry>Connector</entry>
             <entry>Contains id of edid blob ptr object.</entry>
           </row>
           <row>
-            <entry>“DPMS”</entry>
+            <entry>"DPMS"</entry>
             <entry>ENUM</entry>
-            <entry>{ “On”, “Standby”, “Suspend”, “Off” }</entry>
+            <entry>{ "On", "Standby", "Suspend", "Off" }</entry>
             <entry>Connector</entry>
             <entry>Contains DPMS operation mode value.</entry>
           </row>
           <row>
-            <entry>“PATH”</entry>
+            <entry>"PATH"</entry>
             <entry>BLOB | IMMUTABLE</entry>
             <entry>0</entry>
             <entry>Connector</entry>
             <entry>Contains topology path to a connector.</entry>
           </row>
           <row>
-            <entry>“TILE”</entry>
+            <entry>"TILE"</entry>
             <entry>BLOB | IMMUTABLE</entry>
             <entry>0</entry>
             <entry>Connector</entry>
             <entry>Contains tiling information for a connector.</entry>
           </row>
           <row>
-            <entry>“CRTC_ID”</entry>
+            <entry>"CRTC_ID"</entry>
             <entry>OBJECT</entry>
             <entry>DRM_MODE_OBJECT_CRTC</entry>
             <entry>Connector</entry>
@@ -2656,77 +2656,77 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="10">Plane</entry>
-            <entry>“type”</entry>
+            <entry>"type"</entry>
             <entry>ENUM | IMMUTABLE</entry>
             <entry>{ &quot;Overlay&quot;, &quot;Primary&quot;, &quot;Cursor&quot; }</entry>
             <entry>Plane</entry>
             <entry>Plane type</entry>
           </row>
           <row>
-            <entry>“SRC_X”</entry>
+            <entry>"SRC_X"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=UINT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout source x coordinate in 16.16 fixed point (atomic)</entry>
           </row>
           <row>
-            <entry>“SRC_Y”</entry>
+            <entry>"SRC_Y"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=UINT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout source y coordinate in 16.16 fixed point (atomic)</entry>
           </row>
           <row>
-            <entry>“SRC_W”</entry>
+            <entry>"SRC_W"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=UINT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout source width in 16.16 fixed point (atomic)</entry>
           </row>
           <row>
-            <entry>“SRC_H”</entry>
+            <entry>"SRC_H"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=UINT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout source height in 16.16 fixed point (atomic)</entry>
           </row>
           <row>
-            <entry>“CRTC_X”</entry>
+            <entry>"CRTC_X"</entry>
             <entry>SIGNED_RANGE</entry>
             <entry>Min=INT_MIN, Max=INT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout CRTC (destination) x coordinate (atomic)</entry>
           </row>
           <row>
-            <entry>“CRTC_Y”</entry>
+            <entry>"CRTC_Y"</entry>
             <entry>SIGNED_RANGE</entry>
             <entry>Min=INT_MIN, Max=INT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout CRTC (destination) y coordinate (atomic)</entry>
           </row>
           <row>
-            <entry>“CRTC_W”</entry>
+            <entry>"CRTC_W"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=UINT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout CRTC (destination) width (atomic)</entry>
           </row>
           <row>
-            <entry>“CRTC_H”</entry>
+            <entry>"CRTC_H"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=UINT_MAX</entry>
             <entry>Plane</entry>
             <entry>Scanout CRTC (destination) height (atomic)</entry>
           </row>
           <row>
-            <entry>“FB_ID”</entry>
+            <entry>"FB_ID"</entry>
             <entry>OBJECT</entry>
             <entry>DRM_MODE_OBJECT_FB</entry>
             <entry>Plane</entry>
             <entry>Scanout framebuffer (atomic)</entry>
           </row>
           <row>
-            <entry>“CRTC_ID”</entry>
+            <entry>"CRTC_ID"</entry>
             <entry>OBJECT</entry>
             <entry>DRM_MODE_OBJECT_CRTC</entry>
             <entry>Plane</entry>
@@ -2734,106 +2734,106 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="1">DVI-I</entry>
-            <entry>“subconnector”</entry>
+            <entry>"subconnector"</entry>
             <entry>ENUM</entry>
-            <entry>{ “Unknown”, “DVI-D”, “DVI-A” }</entry>
+            <entry>{ "Unknown", "DVI-D", "DVI-A" }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“select subconnector”</entry>
+            <entry>"select subconnector"</entry>
             <entry>ENUM</entry>
-            <entry>{ “Automatic”, “DVI-D”, “DVI-A” }</entry>
+            <entry>{ "Automatic", "DVI-D", "DVI-A" }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
             <entry morerows="12">TV</entry>
-            <entry>“subconnector”</entry>
+            <entry>"subconnector"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;Unknown&quot;, &quot;Composite&quot;, &quot;SVIDEO&quot;, &quot;Component&quot;, &quot;SCART&quot; }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“select subconnector”</entry>
+            <entry>"select subconnector"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;Automatic&quot;, &quot;Composite&quot;, &quot;SVIDEO&quot;, &quot;Component&quot;, &quot;SCART&quot; }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“mode”</entry>
+            <entry>"mode"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;NTSC_M&quot;, &quot;NTSC_J&quot;, &quot;NTSC_443&quot;, &quot;PAL_B&quot; } etc.</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“left margin”</entry>
+            <entry>"left margin"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“right margin”</entry>
+            <entry>"right margin"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“top margin”</entry>
+            <entry>"top margin"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“bottom margin”</entry>
+            <entry>"bottom margin"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“brightness”</entry>
+            <entry>"brightness"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“contrast”</entry>
+            <entry>"contrast"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“flicker reduction”</entry>
+            <entry>"flicker reduction"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“overscan”</entry>
+            <entry>"overscan"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“saturation”</entry>
+            <entry>"saturation"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“hue”</entry>
+            <entry>"hue"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
@@ -2841,14 +2841,14 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="1">Virtual GPU</entry>
-            <entry>“suggested X”</entry>
+            <entry>"suggested X"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=0xffffffff</entry>
             <entry>Connector</entry>
             <entry>property to suggest an X offset for a connector</entry>
           </row>
           <row>
-            <entry>“suggested Y”</entry>
+            <entry>"suggested Y"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=0xffffffff</entry>
             <entry>Connector</entry>
@@ -2856,7 +2856,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="2">Optional</entry>
-            <entry>“scaling mode”</entry>
+            <entry>"scaling mode"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;None&quot;, &quot;Full&quot;, &quot;Center&quot;, &quot;Full aspect&quot; }</entry>
             <entry>Connector</entry>
@@ -2872,7 +2872,7 @@ void intel_crt_init(struct drm_device *dev)
               ratios.</entry>
           </row>
           <row>
-            <entry>“dirty”</entry>
+            <entry>"dirty"</entry>
             <entry>ENUM | IMMUTABLE</entry>
             <entry>{ &quot;Off&quot;, &quot;On&quot;, &quot;Annotate&quot; }</entry>
             <entry>Connector</entry>
@@ -2888,7 +2888,7 @@ void intel_crt_init(struct drm_device *dev)
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“audio”</entry>
+            <entry>"audio"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;force-dvi&quot;, &quot;off&quot;, &quot;auto&quot;, &quot;on&quot; }</entry>
             <entry>Connector</entry>
@@ -2896,7 +2896,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="16">SDVO-TV</entry>
-            <entry>“mode”</entry>
+            <entry>"mode"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;NTSC_M&quot;, &quot;NTSC_J&quot;, &quot;NTSC_443&quot;, &quot;PAL_B&quot; } etc.</entry>
             <entry>Connector</entry>
@@ -2931,84 +2931,84 @@ void intel_crt_init(struct drm_device *dev)
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“hpos”</entry>
+            <entry>"hpos"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“vpos”</entry>
+            <entry>"vpos"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“contrast”</entry>
+            <entry>"contrast"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“saturation”</entry>
+            <entry>"saturation"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“hue”</entry>
+            <entry>"hue"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“sharpness”</entry>
+            <entry>"sharpness"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“flicker_filter”</entry>
+            <entry>"flicker_filter"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“flicker_filter_adaptive”</entry>
+            <entry>"flicker_filter_adaptive"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“flicker_filter_2d”</entry>
+            <entry>"flicker_filter_2d"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“tv_chroma_filter”</entry>
+            <entry>"tv_chroma_filter"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“tv_luma_filter”</entry>
+            <entry>"tv_luma_filter"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“dot_crawl”</entry>
+            <entry>"dot_crawl"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1</entry>
             <entry>Connector</entry>
@@ -3016,7 +3016,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry>SDVO-TV/LVDS</entry>
-            <entry>“brightness”</entry>
+            <entry>"brightness"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
@@ -3027,21 +3027,21 @@ void intel_crt_init(struct drm_device *dev)
             <entry morerows="1">Generic</entry>
             <entry>&quot;Broadcast RGB&quot;</entry>
             <entry>ENUM</entry>
-            <entry>{ “Full”, “Limited 16:235” }</entry>
+            <entry>{ "Full", "Limited 16:235" }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
             <entry>&quot;Broadcast RGB&quot;</entry>
             <entry>ENUM</entry>
-            <entry>{ “off”, “auto”, “on” }</entry>
+            <entry>{ "off", "auto", "on" }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
             <entry morerows="18">Poulsbo</entry>
             <entry morerows="1">Generic</entry>
-            <entry>“backlight”</entry>
+            <entry>"backlight"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=100</entry>
             <entry>Connector</entry>
@@ -3049,7 +3049,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="16">SDVO-TV</entry>
-            <entry>“mode”</entry>
+            <entry>"mode"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;NTSC_M&quot;, &quot;NTSC_J&quot;, &quot;NTSC_443&quot;, &quot;PAL_B&quot; } etc.</entry>
             <entry>Connector</entry>
@@ -3084,84 +3084,84 @@ void intel_crt_init(struct drm_device *dev)
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“hpos”</entry>
+            <entry>"hpos"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“vpos”</entry>
+            <entry>"vpos"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“contrast”</entry>
+            <entry>"contrast"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“saturation”</entry>
+            <entry>"saturation"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“hue”</entry>
+            <entry>"hue"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“sharpness”</entry>
+            <entry>"sharpness"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“flicker_filter”</entry>
+            <entry>"flicker_filter"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“flicker_filter_adaptive”</entry>
+            <entry>"flicker_filter_adaptive"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“flicker_filter_2d”</entry>
+            <entry>"flicker_filter_2d"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“tv_chroma_filter”</entry>
+            <entry>"tv_chroma_filter"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“tv_luma_filter”</entry>
+            <entry>"tv_luma_filter"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“dot_crawl”</entry>
+            <entry>"dot_crawl"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1</entry>
             <entry>Connector</entry>
@@ -3169,7 +3169,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry>SDVO-TV/LVDS</entry>
-            <entry>“brightness”</entry>
+            <entry>"brightness"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max= SDVO dependent</entry>
             <entry>Connector</entry>
@@ -3231,7 +3231,7 @@ void intel_crt_init(struct drm_device *dev)
             <entry>&quot;colorkey_mode&quot;</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;disabled&quot;, &quot;Y component&quot;, &quot;U component&quot;
-        , &quot;V component&quot;, &quot;RGB&quot;, “R component&quot;, &quot;G component&quot;, &quot;B component&quot; }</entry>
+        , &quot;V component&quot;, &quot;RGB&quot;, "R component&quot;, &quot;G component&quot;, &quot;B component&quot; }</entry>
             <entry>Plane</entry>
             <entry>TBD</entry>
           </row>
@@ -3259,7 +3259,7 @@ void intel_crt_init(struct drm_device *dev)
           <row>
             <entry morerows="1">exynos</entry>
             <entry>CRTC</entry>
-            <entry>“mode”</entry>
+            <entry>"mode"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;normal&quot;, &quot;blank&quot; }</entry>
             <entry>CRTC</entry>
@@ -3267,7 +3267,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry>Overlay</entry>
-            <entry>“zpos”</entry>
+            <entry>"zpos"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=MAX_PLANE-1</entry>
             <entry>Plane</entry>
@@ -3276,7 +3276,7 @@ void intel_crt_init(struct drm_device *dev)
           <row>
             <entry morerows="1">i2c/ch7006_drv</entry>
             <entry>Generic</entry>
-            <entry>“scale”</entry>
+            <entry>"scale"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=2</entry>
             <entry>Connector</entry>
@@ -3284,9 +3284,9 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="1">TV</entry>
-            <entry>“mode”</entry>
+            <entry>"mode"</entry>
             <entry>ENUM</entry>
-            <entry>{ &quot;PAL&quot;, &quot;PAL-M&quot;,&quot;PAL-N&quot;}, ”PAL-Nc&quot;
+            <entry>{ &quot;PAL&quot;, &quot;PAL-M&quot;,&quot;PAL-N&quot;}, "PAL-Nc&quot;
         , &quot;PAL-60&quot;, &quot;NTSC-M&quot;, &quot;NTSC-J&quot; }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
@@ -3301,35 +3301,35 @@ void intel_crt_init(struct drm_device *dev)
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“contrast”</entry>
+            <entry>"contrast"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=8192-1</entry>
             <entry>Plane</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“brightness”</entry>
+            <entry>"brightness"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1024</entry>
             <entry>Plane</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“hue”</entry>
+            <entry>"hue"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=359</entry>
             <entry>Plane</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“saturation”</entry>
+            <entry>"saturation"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=8192-1</entry>
             <entry>Plane</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“iturbt_709”</entry>
+            <entry>"iturbt_709"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1</entry>
             <entry>Plane</entry>
@@ -3337,14 +3337,14 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="1">Nv04 Overlay</entry>
-            <entry>“colorkey”</entry>
+            <entry>"colorkey"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=0x01ffffff</entry>
             <entry>Plane</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“brightness”</entry>
+            <entry>"brightness"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1024</entry>
             <entry>Plane</entry>
@@ -3352,49 +3352,49 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry morerows="6">Display</entry>
-            <entry>“dithering mode”</entry>
+            <entry>"dithering mode"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;auto&quot;, &quot;off&quot;, &quot;on&quot; }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“dithering depth”</entry>
+            <entry>"dithering depth"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;auto&quot;, &quot;off&quot;, &quot;on&quot;, &quot;static 2x2&quot;, &quot;dynamic 2x2&quot;, &quot;temporal&quot; }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“underscan”</entry>
+            <entry>"underscan"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;auto&quot;, &quot;6 bpc&quot;, &quot;8 bpc&quot; }</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“underscan hborder”</entry>
+            <entry>"underscan hborder"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=128</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“underscan vborder”</entry>
+            <entry>"underscan vborder"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=128</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“vibrant hue”</entry>
+            <entry>"vibrant hue"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=180</entry>
             <entry>Connector</entry>
             <entry>TBD</entry>
           </row>
           <row>
-            <entry>“color vibrance”</entry>
+            <entry>"color vibrance"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=200</entry>
             <entry>Connector</entry>
@@ -3403,7 +3403,7 @@ void intel_crt_init(struct drm_device *dev)
           <row>
             <entry>omap</entry>
             <entry>Generic</entry>
-            <entry>“zorder”</entry>
+            <entry>"zorder"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=3</entry>
             <entry>CRTC, Plane</entry>
@@ -3412,7 +3412,7 @@ void intel_crt_init(struct drm_device *dev)
           <row>
             <entry>qxl</entry>
             <entry>Generic</entry>
-            <entry>“hotplug_mode_update&quot;</entry>
+            <entry>"hotplug_mode_update&quot;</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1</entry>
             <entry>Connector</entry>
@@ -3421,7 +3421,7 @@ void intel_crt_init(struct drm_device *dev)
           <row>
             <entry morerows="8">radeon</entry>
             <entry>DVI-I</entry>
-            <entry>“coherent”</entry>
+            <entry>"coherent"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1</entry>
             <entry>Connector</entry>
@@ -3429,7 +3429,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry>DAC enable load detect</entry>
-            <entry>“load detection”</entry>
+            <entry>"load detection"</entry>
             <entry>RANGE</entry>
             <entry>Min=0, Max=1</entry>
             <entry>Connector</entry>
@@ -3476,7 +3476,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry>Audio</entry>
-            <entry>“audio”</entry>
+            <entry>"audio"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;off&quot;, &quot;on&quot;, &quot;auto&quot; }</entry>
             <entry>Connector</entry>
@@ -3484,7 +3484,7 @@ void intel_crt_init(struct drm_device *dev)
           </row>
           <row>
             <entry>FMT Dithering</entry>
-            <entry>“dither”</entry>
+            <entry>"dither"</entry>
             <entry>ENUM</entry>
             <entry>{ &quot;off&quot;, &quot;on&quot; }</entry>
             <entry>Connector</entry>
@@ -4143,19 +4143,19 @@ int num_ioctls;</synopsis>
       <sect2>
         <title>GTT Fences and Swizzling</title>
 !Idrivers/gpu/drm/i915/i915_gem_fence.c
-        <sect3>
-          <title>Global GTT Fence Handling</title>
+      </sect2>
+      <sect2>
+        <title>Global GTT Fence Handling</title>
 !Pdrivers/gpu/drm/i915/i915_gem_fence.c fence register handling
-        </sect3>
-        <sect3>
-          <title>Hardware Tiling and Swizzling Details</title>
+      </sect2>
+      <sect2>
+        <title>Hardware Tiling and Swizzling Details</title>
 !Pdrivers/gpu/drm/i915/i915_gem_fence.c tiling swizzling details
-        </sect3>
       </sect2>
       <sect2>
         <title>Object Tiling IOCTLs</title>
-!Idrivers/gpu/drm/i915/i915_gem_tiling.c
 !Pdrivers/gpu/drm/i915/i915_gem_tiling.c buffer object tiling
+!Idrivers/gpu/drm/i915/i915_gem_tiling.c
       </sect2>
       <sect2>
         <title>Buffer Object Eviction</title>
