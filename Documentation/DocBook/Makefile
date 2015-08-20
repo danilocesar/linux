@@ -8,7 +8,7 @@
 
 DOCBOOKS := drm.xml
 
-MARKDOWNREADY :=
+MARKDOWNREADY := drm.xml
 
 include Documentation/DocBook/media/Makefile
 
